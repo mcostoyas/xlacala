@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>
+      Configuración
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (submit)="setDefaults()">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Límite</ion-label>
+        <ion-select [(ngModel)]="limit" name="limit">
+          <ion-option value="1">1</ion-option>
+          <ion-option value="3">3</ion-option>
+          <ion-option value="5">5</ion-option>
+          <ion-option value="7">7</ion-option>
+          <ion-option value="10">10</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <button ion-button color="danger" type="submit" block>Guardar configuración</button>
+</form>
+</ion-content>

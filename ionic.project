@@ -1,0 +1,10 @@
+{
+  "name": "proxy-xlacala",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/feeds",
+      "proxyUrl": "https://www.blogger.com/feeds/146715605356435429/posts/default?max-results=5"
+    }
+  ]
+}

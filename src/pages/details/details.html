@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="danger">
+      <ion-title> {{ item.children[3].firstChild.data }} </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <!--img src="{{ item.children[11].attributes[1].nodeValue.replace("s72-c","s320") }}"/-->
+    <!--img *ngIf="img320" src="{{ img320 }}"/-->
+    <ion-card-content>
+      <ion-card-title>
+        {{ item.children[3].firstChild.data }}
+      </ion-card-title>
+      <p> {{ txt }} </p>
+    </ion-card-content>
+    <ion-list>
+      <ion-item *ngFor="let img of imgs">
+          <!--ion-thumbnail *ngIf="img"-->
+            <img *ngIf="img" src="{{ img.href }}"/>
+          <!--/ion-thumbnail-->
+          <!--ion-item> {{ item.children[3].firstChild.data }} </ion-item-->
+          <!--h2> {{ item.children[1].innerHTML.slice(0,10) }} </h2-->
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

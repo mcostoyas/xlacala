@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-navbar no-border-bottom color="danger">
+    <ion-title>
+      Club Ciclista Xlacala
+    </ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="about" color="danger">
+      <ion-segment-button value="xlacala">
+        XLACALA
+      </ion-segment-button>
+      <ion-segment-button value="patrocinadores">
+        PATROCINADORES
+      </ion-segment-button>
+      <ion-segment-button value="autor">
+        AUTOR
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div [ngSwitch]="about">
+    <ion-list  no-lines *ngSwitchCase="'xlacala'">
+      <ion-grid>
+        <ion-row>
+          <ion-col width-30>
+            <img src="assets/img/xlacala.jpg">
+          </ion-col>
+          <ion-col width-70>
+            <ion-note>
+              Aficionados a la bici que residimos en el Aljarafe Sevillano,
+              principalmente en Mairena del Aljarafe.
+              Todas las personas tienen hueco con nosotros, da igual nivel, sexo y edad.
+              Nuestra filosofía: PASAR UN BUEN RATO CON AMIGOS , CON LA BICI (y sin ella).
+              Solo tienes que venir a alguna ruta a comprobarlo.
+            </ion-note>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-100>
+            <a ion-botton href="http://xlacala.blogspot.com.es">
+                Siguenos en nuestro blog, http://xlacala.blogspot.com.es
+            </a>
+            <ion-chip>
+              <ion-icon name="at" color="danger"></ion-icon>
+              <ion-label>xlacala@gmail.com</ion-label>
+            </ion-chip>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-100>
+            <img src="assets/img/calendario2017.png">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <ion-list no-lines *ngSwitchCase="'patrocinadores'">
+      <ion-grid padding>
+        <ion-row>
+          <ion-col width-50>
+            <!--ion-note>Atlanterra</ion-note-->
+            <img src="assets/img/atlanterra.jpg">
+          </ion-col>
+          <ion-col width-50>
+            <!--ion-note>Álvaro Cepello</ion-note-->
+            <img src="assets/img/cepello.png">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-50>
+            <!--ion-note>IlBasilico</ion-note-->
+            <img src="assets/img/ilbasilico.jpg">
+          </ion-col>
+          <ion-col width-50>
+            <!--ion-note>Aluminios PISA</ion-note-->
+            <img src="assets/img/alu_pisa.jpg">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-50>
+            <!--ion-note>Bicicletas Palma</ion-note-->
+            <img src="assets/img/bici_palma.png">
+          </ion-col>
+          <ion-col width-50>
+            <!--ion-note>BM Dental</ion-note-->
+            <img src="assets/img/bm_dental.jpg">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-100>
+            <!--ion-note>Universal Motor</ion-note-->
+            <img src="assets/img/uni_motor.jpg">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <ion-list no-lines *ngSwitchCase="'autor'">
+      <h2>Xlacala App</h2>
+      <ion-grid padding>
+        <ion-row>
+          <ion-col width-100>
+            <ion-note>
+              Aplicación basada en el Framework Ionic 2, que presenta las últimas entradas del blob de nuestro club
+            </ion-note>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-100>
+            <ion-note>
+              Versión: 1.0.0
+            </ion-note>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-100>
+            <ion-note>
+              Fecha: Marzo 2017
+            </ion-note>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-65>
+            <ion-note>Autor: Manuel Costoyas</ion-note>
+            <ion-chip>
+              <ion-icon name="at" color="danger"></ion-icon>
+              <ion-label>mcostoyas@gmail.com</ion-label>
+            </ion-chip>
+          </ion-col>
+          <ion-col width-35>
+            <img src="assets/img/mcostoyas.jpg">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Xlacala</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list  no-lines>
+    <button ion-item *ngFor="let item of items" (click)="viewItem(item)">
+        <ion-thumbnail *ngIf="item.children[11].attributes[1].nodeValue" item-left>
+          <img src="{{ item.children[11].attributes[1].nodeValue }}"/>
+        </ion-thumbnail>
+        <ion-list>
+          <ion-item> {{ item.children[3].firstChild.data }} </ion-item>
+          <ion-note padding> {{ item.children[1].innerHTML.slice(0,10) }} </ion-note>
+        </ion-list>
+    </button>
+  </ion-list>
+</ion-content>
